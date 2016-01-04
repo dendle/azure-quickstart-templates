@@ -179,7 +179,7 @@
     }
   },
   "variables": {
-    "templateBaseUrl": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/elasticsearch/",
+    "templateBaseUrl": "https://raw.githubusercontent.com/dendle/azure-quickstart-templates/master/elasticsearch/",
     "locationMap": {
         "ResourceGroup":"[resourceGroup().location]",
         "West US":"[parameters('location')]",
