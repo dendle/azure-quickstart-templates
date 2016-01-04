@@ -34,6 +34,18 @@
     },
     "OS": {
       "value": "ubuntu"
+    },
+    "azureStorageAccountName": {
+      "value": ""
+    },
+    "azureStorageAccountKey": {
+      "value": ""
+    },
+    "awsStorageAccessKey": {
+      "value": ""
+    },
+    "awsStorageSecretKey": {
+      "value": ""
     }
   }
 }
