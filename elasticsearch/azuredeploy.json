@@ -454,7 +454,7 @@
       "Standard_D12_v2": {
         "dataDisks":8,
         "nodesPerStorageAccount":4,
-        "storageAccountType":"Premium_LRS"
+        "storageAccountType":"Standard_LRS"
       }
     },
     "nodesPerStorageAccount":"[variables('dataSkuSettings')[parameters('vmSizeDataNodes')].nodesPerStorageAccount]",
