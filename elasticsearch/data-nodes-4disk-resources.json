@@ -70,7 +70,31 @@
       "metadata": {
         "description": "loadBalancerBackendAddressPools config object"
       }
-    }
+    },
+    "azureStorageAccountName": {
+	"type": "string",
+	"metadata": {
+		"description": "Azure Storage Account name"
+	}
+},
+"azureStorageAccountKey": {
+	"type": "string",
+	"metadata": {
+		"description": "Azure Storage Account Key"
+	}
+},
+"awsStorageAccessKey": {
+	"type": "string",
+	"metadata": {
+		"description": "AWS Storage Access Key"
+	}
+},
+"awsStorageSecretKey": {
+	"type": "string",
+	"metadata": {
+		"description": "AWS Storage Secret Key"
+	}
+}
   },
   "variables": {
     "vmStorageAccountContainerName": "vhd",
