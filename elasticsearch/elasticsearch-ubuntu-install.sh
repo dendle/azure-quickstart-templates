@@ -268,6 +268,10 @@ echo "cloud.azure.storage.key: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elastic
 echo "cloud.aws.access_key: $AWS_ACCESS_KEY" >> /etc/elasticsearch/elasticsearch.yml
 echo "cloud.aws.secret_key: $AWS_SECRET_KEY" >> /etc/elasticsearch/elasticsearch.yml
 
+#Enable CORS for logstash
+
+echo "http.cors.enabled: true" >> /etc/elasticsearch/elasticsearch.yml
+
 # Configure Elasticsearch node type
 log "Configure master/client/data node type flags mater-$MASTER_ONLY_NODE data-$DATA_NODE"
 
