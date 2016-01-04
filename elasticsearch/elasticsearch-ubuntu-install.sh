@@ -76,6 +76,10 @@ INSTALL_MARVEL=0
 CLIENT_ONLY_NODE=0
 DATA_NODE=0
 MASTER_ONLY_NODE=0
+AZURE_ACCOUNT_NAME=""
+AZURE_ACCOUNT_KEY=""
+AWS_ACCESS_KEY=""
+AWS_SECRET_KEY=""
 
 #Loop through options passed
 while getopts :n:d:v:mxyzsh optname; do
@@ -107,6 +111,18 @@ while getopts :n:d:v:mxyzsh optname; do
       ;;
     d) #place data on local resource disk
       NON_DURABLE=1
+      ;;
+    i) #Azure account name
+      AZURE_ACCOUNT_NAME=${OPTARG}
+      ;;
+    k) #Azure key
+      AZURE_ACCOUNT_KEY=${OPTARG}
+      ;;
+    e) #AWS key
+      AWS_ACCESS_KEY=${OPTARG}
+      ;;
+    f) #AWS secret key
+      AWS_SECRET_KEY=${OPTARG}
       ;;
     h) #show help
       help
@@ -246,6 +262,11 @@ log "Update configuration with hosts configuration of $HOSTS_CONFIG"
 echo "discovery.zen.ping.multicast.enabled: false" >> /etc/elasticsearch/elasticsearch.yml
 echo "discovery.zen.ping.unicast.hosts: $HOSTS_CONFIG" >> /etc/elasticsearch/elasticsearch.yml
 
+# Configure storage plugins
+echo "cloud.azure.storage.account: $AZURE_ACCOUNT_NAME" >> /etc/elasticsearch/elasticsearch.yml
+echo "cloud.azure.storage.key: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "cloud.aws.access_key: $AWS_ACCESS_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "cloud.aws.secret_key: $AWS_SECRET_KEY" >> /etc/elasticsearch/elasticsearch.yml
 
 # Configure Elasticsearch node type
 log "Configure master/client/data node type flags mater-$MASTER_ONLY_NODE data-$DATA_NODE"
