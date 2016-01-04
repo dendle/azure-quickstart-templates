@@ -301,7 +301,11 @@ if [ ${INSTALL_MARVEL} -ne 0 ]; then
         /usr/share/elasticsearch/bin/plugin install license
         /usr/share/elasticsearch/bin/plugin install marvel-agent
     else
+        /usr/share/elasticsearch/bin/plugin -i mobz/elasticsearch-head
+        /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf
         /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
+        /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-azure/2.8.1
+        /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-aws/2.7.1
     fi
 fi
 
