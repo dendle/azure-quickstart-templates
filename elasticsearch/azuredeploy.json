@@ -676,6 +676,18 @@
           },
           "lbBackendPools": {
             "value": "[variables('dataLBSettings')]"
+          },
+          "azureStorageAccountName" : {
+            "value":"[parameters('azureStorageAccountName')]"
+          },
+          "azureStorageAccountKey" : {
+            "value":"[parameters('azureStorageAccountKey')]"
+          },
+          "awsStorageAccessKey" : {
+            "value":"[parameters('awsStorageAccessKey')]"
+          },
+          "awsStorageSecretKey" : {
+            "value":"[parameters('awsStorageSecretKey')]"
           }
         }
       }
