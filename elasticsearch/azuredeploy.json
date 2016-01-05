@@ -180,24 +180,28 @@
     },
     "azureStorageAccountName": {
       "type": "string",
+      "defaultValue" : "",
       "metadata": {
         "description": "The account name to use for the Azure Storage repository plugin"
       }
     },
     "azureStorageAccountKey": {
       "type": "string",
+      "defaultValue" : "",
       "metadata": {
         "description": "The account key to use for the Azure Storage repository plugin"
       }
     },
     "awsStorageAccessKey": {
       "type": "string",
+      "defaultValue" : "",
       "metadata": {
         "description": "The access key to use for the Amazon Web Services Storage repository plugin"
       }
     },
     "awsStorageSecretKey": {
       "type": "string",
+      "defaultValue" : "",
       "metadata": {
         "description": "The secret key to use for the Amazon Web Services Storage repository plugin"
       }
