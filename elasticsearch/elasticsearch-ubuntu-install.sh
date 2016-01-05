@@ -82,7 +82,7 @@ AWS_ACCESS_KEY=""
 AWS_SECRET_KEY=""
 
 #Loop through options passed
-while getopts :n:d:v:mxyzsh optname; do
+while getopts :n:d:v:mxyzshi:k:e:f: optname; do
     log "Option $optname set with value ${OPTARG}"
   case $optname in
     n) #set cluster name
