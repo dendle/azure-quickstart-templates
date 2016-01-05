@@ -263,11 +263,14 @@ echo "discovery.zen.ping.multicast.enabled: false" >> /etc/elasticsearch/elastic
 echo "discovery.zen.ping.unicast.hosts: $HOSTS_CONFIG" >> /etc/elasticsearch/elasticsearch.yml
 
 # Configure storage plugins
-echo "cloud.azure.storage.account: $AZURE_ACCOUNT_NAME" >> /etc/elasticsearch/elasticsearch.yml
-echo "cloud.azure.storage.key: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
-echo "cloud.aws.access_key: $AWS_ACCESS_KEY" >> /etc/elasticsearch/elasticsearch.yml
-echo "cloud.aws.secret_key: $AWS_SECRET_KEY" >> /etc/elasticsearch/elasticsearch.yml
-
+echo "cloud:" >> /etc/elasticsearch/elasticsearch.yml
+echo "    azure:" >> /etc/elasticsearch/elasticsearch.yml
+echo "        storage:" >> /etc/elasticsearch/elasticsearch.yml
+echo "            account: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "            key: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "    aws:" >> /etc/elasticsearch/elasticsearch.yml
+echo "        access_key: $AWS_ACCESS_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "        secret_key: $AWS_SECRET_KEY" >> /etc/elasticsearch/elasticsearch.yml
 #Enable CORS for logstash
 
 echo "http.cors.enabled: true" >> /etc/elasticsearch/elasticsearch.yml
