@@ -457,7 +457,7 @@
       },
       "Standard_D12_v2": {
         "dataDisks":2,
-        "nodesPerStorageAccount":2,
+        "nodesPerStorageAccount":6,
         "storageAccountType":"Standard_LRS"
       }
     },
