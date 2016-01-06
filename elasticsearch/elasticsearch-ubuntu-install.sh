@@ -266,7 +266,7 @@ echo "discovery.zen.ping.unicast.hosts: $HOSTS_CONFIG" >> /etc/elasticsearch/ela
 echo "cloud:" >> /etc/elasticsearch/elasticsearch.yml
 echo "    azure:" >> /etc/elasticsearch/elasticsearch.yml
 echo "        storage:" >> /etc/elasticsearch/elasticsearch.yml
-echo "            account: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
+echo "            account: $AZURE_ACCOUNT_NAME" >> /etc/elasticsearch/elasticsearch.yml
 echo "            key: $AZURE_ACCOUNT_KEY" >> /etc/elasticsearch/elasticsearch.yml
 echo "    aws:" >> /etc/elasticsearch/elasticsearch.yml
 echo "        access_key: $AWS_ACCESS_KEY" >> /etc/elasticsearch/elasticsearch.yml
