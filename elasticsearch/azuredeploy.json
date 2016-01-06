@@ -318,7 +318,7 @@
             "typeHandlerVersion": "1.2",
             "settings": {
               "fileUris": "[variables('ubuntuScripts')]",
-              "commandToExecute": "[concat('bash elasticsearch-ubuntu-install.sh -xn ', variables('esSettings').clusterName, ' -v ', variables('esSettings').version, ' -d ', variables('esSettings').discoveryHosts, variables('marvelParamValue'))]"
+              "commandToExecute": "[concat('bash elasticsearch-ubuntu-install.sh -xn ', variables('esSettings').clusterName, ' -v ', variables('esSettings').version, ' -d ', variables('esSettings').discoveryHosts, ' -i ', parameters('azureStorageAccountName'), ' -k ', parameters('azureStorageAccountKey'), ' -e ', parameters('awsStorageAccessKey'), ' -f ', parameters('awsStorageSecretKey'), variables('marvelParamValue'))]"
             }
           },
         "client": {
@@ -327,7 +327,7 @@
             "typeHandlerVersion": "1.2",
             "settings": {
               "fileUris": "[variables('ubuntuScripts')]",
-              "commandToExecute": "[concat('bash elasticsearch-ubuntu-install.sh -yn ', variables('esSettings').clusterName, ' -v ', variables('esSettings').version, ' -d ', variables('esSettings').discoveryHosts, variables('marvelParamValue'))]"
+              "commandToExecute": "[concat('bash elasticsearch-ubuntu-install.sh -yn ', variables('esSettings').clusterName, ' -v ', variables('esSettings').version, ' -d ', variables('esSettings').discoveryHosts, ' -i ', parameters('azureStorageAccountName'), ' -k ', parameters('azureStorageAccountKey'), ' -e ', parameters('awsStorageAccessKey'), ' -f ', parameters('awsStorageSecretKey'), variables('marvelParamValue'))]"
             }
           },
         "data": {
