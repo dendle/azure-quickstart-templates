@@ -262,6 +262,9 @@ log "Update configuration with hosts configuration of $HOSTS_CONFIG"
 echo "discovery.zen.ping.multicast.enabled: false" >> /etc/elasticsearch/elasticsearch.yml
 echo "discovery.zen.ping.unicast.hosts: $HOSTS_CONFIG" >> /etc/elasticsearch/elasticsearch.yml
 
+#Turn off auto-create
+echo "action.auto_create_index: false" >> /etc/elasticsearch/elasticsearch.yml
+
 # Configure storage plugins
 echo "cloud:" >> /etc/elasticsearch/elasticsearch.yml
 echo "    azure:" >> /etc/elasticsearch/elasticsearch.yml
