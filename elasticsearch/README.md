@@ -1,4 +1,6 @@
 # Install Elasticsearch cluster on Virtual Machines
+(This fork has been updated to install and configure repository settings for Azure and Amazon)
+(Make sure you say yes to installing marvel, otherwise nothing will work - will fix the parameter name sometime!)
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdendle%2Fazure-quickstart-templates%2Fmaster%2Felasticsearch%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
