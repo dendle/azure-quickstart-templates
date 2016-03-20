@@ -62,7 +62,7 @@ then
 fi
 
 #A set of disks to ignore from partitioning and formatting
-BLACKLIST="/dev/sda|/dev/sdb"
+BLACKLIST=""
 
 # Base path for data disk mount points
 DATA_BASE="/datadisks"
