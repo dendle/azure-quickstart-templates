@@ -297,7 +297,7 @@
     "ubuntuScripts": [
       "[concat(variables('templateBaseUrl'), 'elasticsearch-ubuntu-install.sh')]",
       "[concat(variables('templateBaseUrl'), 'kibana-install.sh')]",
-      "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/shared_scripts/ubuntu/vm-disk-utils-0.1.sh"
+      "https://raw.githubusercontent.com/dendle/azure-quickstart-templates/master/shared_scripts/ubuntu/vm-disk-utils-0.1.sh"
     ],
     "windowsScripts": [
       "[concat(variables('templateBaseUrl'), 'elasticsearch-windows-install.ps1')]"
