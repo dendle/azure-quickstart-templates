@@ -41,7 +41,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_A0",
+      "defaultValue": "Standard_D1",
       "metadata": {
         "description": "Size of the Elasticsearch master nodes"
       }
